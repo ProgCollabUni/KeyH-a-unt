@@ -1,0 +1,92 @@
+plugins {
+    id 'java-library'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'checkstyle'
+}
+
+javafx {
+    version = "19.0.2.1"
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.base', 'javafx.graphics', 'javafx.media']
+}
+
+group 'ch.unibas.dmi.dbis'
+version '0.1.0'
+mainClassName = 'Main'
+
+checkstyle {
+    toolVersion '10.7.0'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+//adds maven central as a maven repository
+repositories {
+    mavenCentral()
+}
+
+/* The following lines are extensively documented. Please remove the documentation when you have read and understood it. */
+dependencies {
+    // EXAMPLE: LOGGING
+    /*
+    The following adds the logging framework Apache Log4J2.
+    The statements serve as an example on how to use libraries.
+    Since these are `implementation` dependencies, they are packed in the final jar.
+    Read the documentation at https://docs.gradle.org/current/userguide/declaring_dependencies.html to learn more
+     */
+    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+
+
+    /*
+    This is another example - it imports the javafx-controls dependency
+     */
+    implementation 'org.openjfx:javafx-controls:19.0.2.1'
+
+    // JUNIT
+    /*
+    The following dependency is required to perform JUnit tests, as for example HelloWorldTest.
+    Since it is a `testCompile` dependency, it will not be part of the final product, only during testing.
+     */
+    testImplementation("org.junit.jupiter:junit-jupiter:5.+")
+
+    /*
+     * This is a dependency for the Junit tests
+     */
+    testImplementation('org.mockito:mockito-core:5.2.0')
+    testImplementation 'junit:junit:4.13.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+javadoc {
+    source = sourceSets.main.allJava;
+}
+
+/*
+The following block adds both compile and runtime dependencies to the jar
+ */
+jar {
+    manifest {
+        attributes(
+                'Main-Class': mainClassName
+        )
+    }
+    from {
+        configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy(DuplicatesStrategy.INCLUDE)
+}
+
+tasks.register("build-cs108") {
+    dependsOn jar
+    dependsOn javadoc
+    dependsOn test
+}

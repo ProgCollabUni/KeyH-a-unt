@@ -1,0 +1,52 @@
+Projekt-plan:
+- 08/03/23 Meilenstein 1:
+
+02/02/23 - 05/03/23 Präsentation: Alle
+02/02/23 - 05/03/23 Projektplan gestalten: Alle
+06/02/23 - 08/03/23 Puffer
+
+08/03/23 - 29/03/23 Meilenstein 2:
+
+08/03/23 - 12/03/23 Protokollentwurd: Alle
+12/03/23 - 18/03/23 Server: Severin, Michel
+12/03/23 - 18/03/23 Cleint: Lukas, Yash
+18/03/23 - 23/03/23 Ping/Pong: Lukas, Michel
+18/03/23 - 23/03/23 User Functionality: Yash, Severin
+23/03/23 - 28/03/23 Puffer/Sync-up
+
+//Die Erstgenannte Person ist der Shotcaller des jeweiligen tasks
+//Und trägt somit die verantwortung.
+
+29/03/23 - 17/04/23 Meilenstein 3:
+
+29/03/23 - 07/04/23 Game logic player: Lukas
+29/03/23 - 07/04/23 Game logic ghost: Michel
+29/03/23 - 07/04/23 Basic chat gui: Severin
+07/04/23 - 13/04/23 Working Prototype: Alle
+07/04/23 - 13/04/23 Game demo: Alle
+13/04/23 - 17/04/23 Präsentation: Alle
+13/04/23 - 17/04/23 Puffer/Sync-up: Alle
+
+17/04/23 - 02/05/23 Meilenstein 4:
+
+17/04/23 - 02/05/23 Dungeon Design(GUI): Yash
+17/04/23 - 23/04/23 Gamerules Checker: Severin
+17/04/23 - 23/04/23 Unit-Tests: Lukas
+01/05/23 - 02/05/23 Puffer/Sync-up: Alle
+
+//Nicht zugewiesene Personen werden zu Dungeon Design(GUI)
+//Neu zugewiesen und sind zuständig für polishing.
+
+05/03/23 - 25/05/23 Meilenstein 5:
+
+03/05/23 - 14/05/23 Final Game Demo: Lukas, Severin
+03/05/23 - 09/05/23 QA Report: Michel
+10/05/23 - 16/05/23 Abschlusspräsentation: Severin
+16/05/23 - 20/05/23 Bonus Achievements: Alle
+20/05/23 - 25/05/23 Puffer/Sync-up: Alle
+
+
+
+
+
+
